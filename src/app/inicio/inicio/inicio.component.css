@@ -1,17 +1,17 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     } 
     
     
-    body {
+    body {
         margin-right: 10px;
         border-spacing: 10px;
-        border-radius: 2px;
+        border-radius: 2px;
         background-color: skyblue;
-        font-family: 'Roboto', sans-serif;
-    /* background-image: url('../img/fondoaws.jpg'); */
+        font-family: 'Roboto', sans-serif;
+    /* background-image: url('../img/fondoaws.jpg'); */
     }
     
     h1 {
@@ -19,14 +19,14 @@
     }
     
     .titulos {
-        display:  center;
-        flex-direction: row;
-        justify-content: space-between;
+        display:  center;
+        flex-direction: row;
+        justify-content: space-between;
         text-align: center;
         color: #01575a ;
         text-size-adjust: calc(100vw - 10px);
-        align-items: center;
-        margin: 1em;
+        align-items: center;
+        margin: 1em;
         }
     
     .container {
@@ -65,6 +65,5 @@
         color: white;
         cursor: not-allowed;
     }
-    
     
     
