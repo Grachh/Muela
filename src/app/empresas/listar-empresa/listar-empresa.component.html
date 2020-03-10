@@ -1,1 +1,27 @@
-<p>listar-empresa works!</p>
+
+<h1>Empresas</h1>
+<button routerLink="../crear-empresa">Añadir cliente</button>
+
+<table class="empresas">
+    <tr>
+        <!-- <th>ID EMPRESA</th> -->
+        <th>NOMBRE EMPRESA</th>
+        <th>DIRECCIÓN</th>
+          <th></th>
+        
+    </tr>
+    <tr *ngFor="let empresa of empresas">
+        <!-- <td>{{empresa.idEmpresa}}</td> -->
+         <td>{{empresa.nombreEmpresa}}</td>
+         <td>{{empresa.idDireccion}}</td>
+         <!-- <td>{{empresa.idDireccion}}</td> -->
+         <td>
+             <button  routerLink="/editar-empresa/{{empresa._idEmpresa}}">
+                 <img src="assets/edit.svg">
+             </button>
+             <button  (click)="borrarEmpresa(empresa._idEmpresa)">
+                 <img src="assets/trash.svg">
+             </button>
+         </td>
+    </tr>
+</table>
