@@ -25,7 +25,7 @@ export class EmpresasService {
   idDireccion: number;
   
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'http://192.168.0.202:8080/ContorladorEmpresa';
+  baseUrl: string = 'http://192.168.0.202:8080/ControladorEmpresa';
 
   
 getEmpresas(){

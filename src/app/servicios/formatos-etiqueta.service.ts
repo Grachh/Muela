@@ -14,8 +14,35 @@ export class FormatosEtiquetaService {
     {idFormato:4, nombreFormato: "formato4", codCliente: true, codClienteExtendido: false, codBarras: true, ean: true, direccion1: true, direccion2: false},
   ]
 
+  formatoEtiqueta: any;
+  baseUrl: string = 'http://192.168.0.202:8080/ControladorFormatoEtiqueta';
+
   constructor(private http: HttpClient) { }
   getFormatos() {
-    return this.formatosEtiqueta;
+    return this.formatosEtiqueta; //comentar cuando esté el servidor
+
+  }
+  // getFormatosEtiqueta() : Observable<FormatoEtiqueta[]> {
+  //   return this.http.get<FormatoEtiqueta[]>(this.baseUrl);
+  // }
+  
+
+
+   getFormatoById(idFormato: number): Observable<FormatoEtiqueta[]> {
+     return this.http.get<FormatoEtiqueta[]>(this.baseUrl + idFormato);
+   }
+
+  crearFormatoEtiqueta(formatoEtiqueta: FormatoEtiqueta): Observable<FormatoEtiqueta[]> {
+    return this.http.post<FormatoEtiqueta[]>(this.baseUrl, formatoEtiqueta);
+  }
+
+  modificarFormatoEtiqueta(idFormato: number, formatoEtiqueta: FormatoEtiqueta): Observable<FormatoEtiqueta[]> {
+    return this.http.put<FormatoEtiqueta[]>(this.baseUrl + idFormato, formatoEtiqueta);
+  }
+
+
+
+ borrarFormatoEtiqueta(idFormato: number): Observable<FormatoEtiqueta[]> {
+  return this.http.delete<FormatoEtiqueta[]>(this.baseUrl + idFormato);
   }
 }

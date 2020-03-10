@@ -1,0 +1,26 @@
+<h1>Etiquetas de producto</h1>
+<button routerLink="../crear-etiqueta">Añadir direccion</button>
+
+<table class="direcciones">
+    <tr>
+        <th>Formato etiqueta</th>
+        <th>Filas</th>
+        <th>Columnas</th>
+          <th></th>
+        ;
+    </tr>
+    <tr *ngFor="let etiqueta of etiquetas">
+         <td>{{etiqueta.idFormato}}</td>
+         <td>{{etiqueta.filas}}</td>
+         <td>{{etiqueta.columnas}}</td>
+         <!-- <td>{{empresa.idDireccion}}</td> -->
+         <td>
+             <button  routerLink="/editar-etiqueta/{{etiqueta._idEtiqueta}}">
+                 <img src="assets/edit-2.svg">
+             </button>
+             <button  (click)="borrarEtiqueta(etiqueta._idEtiqueta)">
+                 <img src="assets/trash.svg">
+             </button>
+         </td>
+    </tr>
+</table>

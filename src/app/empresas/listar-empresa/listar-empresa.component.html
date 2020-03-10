@@ -1,22 +1,25 @@
-
-<h1>Empresas</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Empresas</title>
+</head>
+<body>
+    <h1>Empresas</h1>
 <button routerLink="../crear-empresa">Añadir cliente</button>
 
 <table class="empresas">
     <tr>
-        <!-- <th>ID EMPRESA</th> -->
         <th>NOMBRE EMPRESA</th>
         <th>DIRECCIÓN</th>
           <th></th>
-        
-    </tr>
-    <tr *ngFor="let empresa of empresas">
-        <!-- <td>{{empresa.idEmpresa}}</td> -->
+    
+    <!-- <tr *ngFor="let empresa of empresas"> -->
          <td>{{empresa.nombreEmpresa}}</td>
          <td>{{empresa.idDireccion}}</td>
-         <!-- <td>{{empresa.idDireccion}}</td> -->
          <td>
-             <button  routerLink="/editar-empresa/{{empresa._idEmpresa}}">
+             <button  routerLink="../editar-empresa/{{empresa._idEmpresa}}">
                  <img src="assets/edit.svg">
              </button>
              <button  (click)="borrarEmpresa(empresa._idEmpresa)">
@@ -24,4 +27,6 @@
              </button>
          </td>
     </tr>
-</table>
+</table> 
+</body>
+</html>

@@ -1,1 +1,21 @@
-<p>editar-empresa works!</p>
+<form [formGroup]="formEmpresa" (ngSubmit)="modificarEmpresa()">
+    <div>
+        <label for="idEmpresa">Id Empresa</label>
+        <input type="number" id="idEmpresa" formControlName="idEmpresa" readonly>
+    </div>
+    <div>
+        <label for="nombreEmpresa">Nombre Empresa</label>
+        <input type="text" id="nombreEmpresa" formControlName="nombreEmpresa">
+    </div>
+    <div>
+        <label for="idDireccion">Seleccione la direccion</label>
+    <select id="idDireccion" formControlName="idDireccion">
+            <option *ngFor="let direccion of direcciones" [value]="direccion.idDireccion">{{direccion.direccion}}</option>
+       
+    </select> 
+    </div>
+    <div>
+        <button type="submit">Guardar</button>
+        <button (click)= "limpiarCampos()">Guardar</button>
+    </div>
+</form>

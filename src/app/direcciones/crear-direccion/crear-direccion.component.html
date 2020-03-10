@@ -1,1 +1,21 @@
-<p>crear-direccion works!</p>
+
+<app-inicio></app-inicio>
+<form [formGroup]="formDireccion" (ngSubmit)="guardarDireccion()">
+    <div>
+        <label for="direccion">Direccion</label>
+        <input type="text" id="direccion" formControlName="direccion">
+    </div>
+    <div>
+        <label for="codigoPostal">Código Postal</label>
+        <input type="text" id="codigoPostal" formControlName="codigoPostal">
+    </div>
+    
+    <div>
+        <label for="destino">Destino</label>
+        <input type="text" id="destino" formControlName="destino">
+    </div>
+    <div>
+        <button type="submit">Guardar</button>
+        <button (click)= "limpiarCampos()"> Limpiar</button>
+    </div>
+</form>

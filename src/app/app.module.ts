@@ -1,60 +1,62 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BorrarDireccionComponent } from './direcciones/borrar-direccion/borrar-direccion.component';
-import { CrearDireccionComponent } from './direcciones/crear-direccion/crear-direccion.component';
-import { EditarDireccionComponent } from './direcciones/editar-direccion/editar-direccion.component';
-import { ListarDireccionComponent } from './direcciones/listar-direccion/listar-direccion.component';
-import { BorrarEmpresaComponent } from './empresas/borrar-empresa/borrar-empresa.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { EmpresasService } from './servicios/empresas.service';
 import { CrearEmpresaComponent } from './empresas/crear-empresa/crear-empresa.component';
-import { EditarEmpresaComponent } from './empresas/editar-empresa/editar-empresa.component';
 import { ListarEmpresaComponent } from './empresas/listar-empresa/listar-empresa.component';
-import { BorrarEtiquetaComponent } from './etiquetas/borrar-etiqueta/borrar-etiqueta.component';
-import { CrearEtiquetaComponent } from './etiquetas/crear-etiqueta/crear-etiqueta.component';
-import { EditarEtiquetaComponent } from './etiquetas/editar-etiqueta/editar-etiqueta.component';
-import { EtiquetaEnvioComponent } from './etiquetas/etiqueta-envio/etiqueta-envio.component';
-import { FormatoEtiquetaComponent } from './etiquetas/formato-etiqueta/formato-etiqueta.component';
-import { ListarEtiquetaComponent } from './etiquetas/listar-etiqueta/listar-etiqueta.component';
-import { PaginadoEtiquetaComponent } from './etiquetas/paginado-etiqueta/paginado-etiqueta.component';
-import { GenerarEtiquetaComponent } from './generar-etiqueta/generar-etiqueta.component';
-import { BorrarProductoComponent } from './productos/borrar-producto/borrar-producto.component';
+import { EditarEmpresaComponent } from './empresas/editar-empresa/editar-empresa.component';
+import { CrearDireccionComponent } from './direcciones/crear-direccion/crear-direccion.component';
+import { ListarDireccionComponent } from './direcciones/listar-direccion/listar-direccion.component';
+import { EditarDireccionComponent } from './direcciones/editar-direccion/editar-direccion.component';
+import { CrearFormatoEtiquetaComponent } from './etiquetas/formatoEtiqueta/crear-formato-etiqueta/crear-formato-etiqueta.component';
+import { ListarFormatoEtiquetaComponent } from './etiquetas/formatoEtiqueta/listar-formato-etiqueta/listar-formato-etiqueta.component';
+import { EditarFormatoEtiquetaComponent } from './etiquetas/formatoEtiqueta/editar-formato-etiqueta/editar-formato-etiqueta.component';
+import { GenerarEtiquetasComponent } from './generar-etiquetas/generar-etiquetas.component';
+import { ListarEtiquetaComponent } from './etiquetas/paginadoEtiqueta/listar-etiqueta/listar-etiqueta.component';
+import { CrearEtiquetaComponent } from './etiquetas/paginadoEtiqueta/crear-etiqueta/crear-etiqueta.component';
+import { EditarEtiquetaComponent } from './etiquetas/paginadoEtiqueta/editar-etiqueta/editar-etiqueta.component';
+import { ListarProductoComponent } from './productos/listar-producto/listar-producto.component';
 import { CrearProductoComponent } from './productos/crear-producto/crear-producto.component';
 import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
-import { ListarProductoComponent } from './productos/listar-producto/listar-producto.component';
-import { InicioComponent } from './inicio/inicio/inicio.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    BorrarDireccionComponent,
-    CrearDireccionComponent,
-    EditarDireccionComponent,
-    ListarDireccionComponent,
-    BorrarEmpresaComponent,
+    InicioComponent,
     CrearEmpresaComponent,
-    EditarEmpresaComponent,
     ListarEmpresaComponent,
-    BorrarEtiquetaComponent,
+    EditarEmpresaComponent,
+     CrearDireccionComponent,
+    ListarDireccionComponent,
+    EditarDireccionComponent,
+    CrearFormatoEtiquetaComponent,
+    ListarFormatoEtiquetaComponent,
+    EditarFormatoEtiquetaComponent,
+    GenerarEtiquetasComponent,
+    ListarEtiquetaComponent,
     CrearEtiquetaComponent,
     EditarEtiquetaComponent,
-    EtiquetaEnvioComponent,
-    FormatoEtiquetaComponent,
-    ListarEtiquetaComponent,
-    PaginadoEtiquetaComponent,
-    GenerarEtiquetaComponent,
-    BorrarProductoComponent,
+    ListarProductoComponent,
     CrearProductoComponent,
     EditarProductoComponent,
-    ListarProductoComponent,
-    InicioComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [EmpresasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

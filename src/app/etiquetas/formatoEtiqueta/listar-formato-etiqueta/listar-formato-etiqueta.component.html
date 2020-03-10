@@ -1,0 +1,34 @@
+<h1>Direcciones</h1>
+<button routerLink="../crear-formato-etiqueta">Nuevo formato</button>
+
+<table class="direcciones">
+    <tr>
+        <th>NOMBRE ETIQUETA</th>
+        <th>CÓDIGO CLIENTE</th>
+        <th>CÓDIGO CLIENTE EXT</th>
+        <th>CÓDIGO BARRAS</th>
+        <th>EAN</th>
+        <th>DIRECCIÓN 1</th>
+        <th>DIRECCIÓN 2</th>
+         <th></th>
+        
+    </tr>
+    <tr *ngFor="let formatoEtiqueta of formatosEtiqueta">
+         <td>{{formatoEtiqueta.nombreEtiqueta}}</td>
+         <td>{{formatoEtiqueta.codigoCliente}}</td>
+         <td>{{formatoEtiqueta.codigoClienteExt}}</td>
+         <td>{{formatoEtiqueta.codigoBarras}}</td>
+         <td>{{formatoEtiqueta.Ean}}</td>
+         <td>{{formatoEtiqueta.Direccion1}}</td>
+         <td>{{formatoEtiqueta.Direccion2}}</td>
+         <!-- <td>{{empresa.idDireccion}}</td> -->
+         <td>
+             <button  routerLink="/editar-formato-etiqueta/{{formatoEtiqueta._idFormato}}">
+                 <img src="assets/edit-2.svg">
+             </button>
+             <button  (click)="borrarFormatoEtiqueta(formatoEtiqueta._idFormato)">
+                 <img src="assets/trash.svg">
+             </button>
+         </td>
+    </tr>
+</table>

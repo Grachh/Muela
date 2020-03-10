@@ -1,0 +1,33 @@
+<form [formGroup]="formFormatoEtiqueta" (ngSubmit)="guardarFormatoEtiqueta()">
+    <div>
+        <label for="nombreFormato">Nombre de formato</label>
+        <input type="text" id="nombreFormato" formControlName="nombreFormato">
+    </div>
+    <div>
+        <label for="codCliente">Código de cliente</label>
+        <input type="checkbox" id="codCliente" value="Si" formControlName="codCliente">
+   
+        <label for="codClienteExtendido">Cod. Cliente Extendido</label>
+        <input type="checkbox" id="codClienteExtendido" value="Si" formControlName="codClienteExtendido">
+    </div>
+    <div>
+        <label for="codBarras">Código de barras</label>
+        <input type="checkbox" id="codBarras" value="Si" formControlName="codBarras">
+  
+        <label for="ean">EAN</label>
+        <input type="checkbox" id="ean" value="Si" formControlName="ean">
+    </div>
+    <div>
+        <label for="direccion1">Dirección1</label>
+        <input type="checkbox" id="direccion1" value="Si" formControlName="direccion1">
+    </div>
+    <div>
+        <label for="direccion2">Dirección2</label>
+        <input type="checkbox" id="direccion2" value="Si" formControlName="direccion2">
+    </div>
+    
+     <div>
+        <button type="submit">Guardar</button>
+        <button (click)= "limpiarCampos()"> Limpiar</button>
+    </div>
+</form>

@@ -17,14 +17,14 @@ export class DireccionesService {
   ]
 
   idDireccion: number;
-    direccion: string;
+    direccion: any;
     codigoPostal: string;
     destino: string;
 
   constructor(private http: HttpClient) {  
    }
 
-   baseUrl: string = 'http://192.168.0.202:8080/ControladorDirecciones';
+   baseUrl: string = 'http://192.168.0.202:8080/direccion';
 
 
    getDirecciones() {
