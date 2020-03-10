@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 60%;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+h2 {
+    align-items: center;
+    text-decoration: underline;
+    justify-content: center;
+    display: flex;
+}
+
+.tabla {
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #008489;
+    border-radius: 60px;
+}
+label,
+input {
+    width: calc(100% - 2em);
+    margin: 1em;
+    font-size: 1.2em;
+}
+
+.radio-check {
+    display: flex;
+}
+
+.radio-check label {
+    position: relative;
+}
+
+.radio-check label,
+.radio-check input {
+    width: initial;
+    margin: 0;
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.radio-check input[type="radio"] {
+    opacity: 0;
+}
+
+.check-mark {
+    position: absolute;
+    right: 8px;
+    background-color: lightgrey;
+    height: 25px;
+    width: 25px;
+    border-radius: 30px;
+}
+
+input:checked ~ .check-mark.green {
+    background-color: green;
+}
+
+input:checked ~ .check-mark.yellow {
+    background-color: yellow;
+}

@@ -6,32 +6,27 @@
     <title>Crear Empresa</title>
 </head>
 <body>
-    <article>
-        <label for="post"></label>
-        <form action="post">
-            
-
-crear empresas
-
-<form [formGroup]="formEmpresa" (ngSubmit)="crearEmpresa()">
-    <div>
-        <label for="idEmpresa">Id Empresa</label>
-        <input type="number" id="idEmpresa" formControlName="idEmpresa">
-    </div>
-    <div>
-        <label for="nombreEmpresa">Nombre Empresa</label>
-        <input type="text" id="nombreEmpresa" formControlName="nombreEmpresa">
-    </div>
-    <div>
-        <label for="idDireccion">Id Direccion</label>
-        <input type="number" id="idDireccion" formControlName="idDireccion">
-    </div>
-    <div>
-        <button type="submit">Guardar</button>
-    </div>
-</form>
-
-        </form>
+    <article class="tabla">
+        <h2>
+            Crear Empresas
+        </h2>
+            <form [formGroup]="formEmpresa" (ngSubmit)="crearEmpresa()">
+                <div>
+                    <label for="idEmpresa">Id Empresa</label>
+                    <input type="number" id="idEmpresa" formControlName="idEmpresa">
+                </div>
+                <div>
+                    <label for="nombreEmpresa">Nombre Empresa</label>
+                    <input type="text" id="nombreEmpresa" formControlName="nombreEmpresa">
+                </div>
+                <div>
+                    <label for="idDireccion">Id Direccion</label>
+                    <input type="number" id="idDireccion" formControlName="idDireccion">
+                </div>
+                <div>
+                    <button type="submit">Guardar</button>
+                </div>
+            </form>
     </article>
     
 </body>

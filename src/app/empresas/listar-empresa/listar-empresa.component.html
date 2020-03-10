@@ -6,27 +6,28 @@
     <title>Listar Empresas</title>
 </head>
 <body>
-    <h2>Empresas</h2>
-<button routerLink="../crear-empresa">Añadir Empresa</button>
-
-<table class="empresas">
-    <tr>
-        <th>NOMBRE EMPRESA</th>
-        <th>DIRECCIÓN</th>
-          <th></th>
-    
-    <tr *ngFor="let empresa of empresas">
-         <td>{{empresa.nombreEmpresa}}</td>
-         <td>{{empresa.idDireccion}}</td>
-         <td>
-             <button  routerLink="../editar-empresa/{{empresa._idEmpresa}}">
-                 <img src="assets/edit.svg">
-             </button>
-             <button  (click)="borrarEmpresa(empresa._idEmpresa)">
-                 <img src="assets/trash.svg">
-             </button>
-         </td>
-    </tr>
-</table> 
+    <article class="tabla">
+        <h2>Empresas</h2>
+        <button class="añadir" routerLink="../crear-empresa">Añadir Empresa</button>
+            <table>
+                <tr>
+                    <th>NOMBRE EMPRESA</th>
+                    <th>DIRECCIÓN</th>
+                    <th></th>
+                
+                <tr *ngFor="let empresa of empresas">
+                    <td>{{empresa.nombreEmpresa}}</td>
+                    <td>{{empresa.idDireccion}}</td>
+                    <td>
+                        <button  routerLink="../editar-empresa/{{empresa._idEmpresa}}">
+                            <img src="assets/edit.svg">
+                        </button>
+                        <button  (click)="borrarEmpresa(empresa._idEmpresa)">
+                            <img src="assets/trash.svg">
+                        </button>
+                    </td>
+                </tr>
+            </table> 
+    </article>
 </body>
 </html>

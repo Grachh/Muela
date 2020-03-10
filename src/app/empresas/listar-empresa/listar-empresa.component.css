@@ -10,7 +10,6 @@
         border-spacing: 10px;
         border-radius: 2px;
         font-family: 'Roboto', sans-serif;
-    /* background-image: url('../img/fondoaws.jpg'); */
     }
     
     h1.title {
@@ -29,7 +28,12 @@
         vertical-align: middle;
     }
 
-    h2
+    h2 {
+        align-items: center;
+        text-decoration: underline;
+        justify-content: center;
+        display: flex;
+    }
     
     .title {
         display:  center;
@@ -55,6 +59,13 @@
         flex-direction: row;   
         flex-wrap: nowrap;
     }    
+
+    .tabla {
+        align-items: center;
+        justify-content: center;
+        border: 5px solid #008489;
+        border-radius: 60px;
+    }
     
     button {
         margin: 3px;
@@ -81,4 +92,45 @@
         border: 1px solid rgba(0, 132, 137, 0.3);
         color: white;
         cursor: not-allowed;
+    }
+
+    button.añadir {
+        color: aliceblue;
+        object-position: right;
+        align-items: end;
+        justify-content: flex-end;
+    }
+    
+    .cont-tabla {
+        width: 100%;
+        overflow-x: scroll;  /* auto */
+    }
+    
+    table {
+        width: 60%;
+        padding: 1em;
+        box-shadow: 2px 2px 3px grey;
+        margin: 1em auto;
+    }
+    
+    th {
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+        background-color: #008489;
+        color: white;
+    }
+    
+    td {
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+        border: 2px solid #008489;
+    }
+    
+    th:nth-child(1), 
+    th:nth-child(2) {
+        text-align: left;
+    }
+    
+    td:nth-child(3) {
+        text-align: center;
     }

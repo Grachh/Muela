@@ -10,7 +10,6 @@
         border-spacing: 10px;
         border-radius: 2px;
         font-family: 'Roboto', sans-serif;
-    /* background-image: url('../img/fondoaws.jpg'); */
     }
     
     h1 {
@@ -33,9 +32,9 @@
         margin: 20px;
         padding: 20px;
         border-radius: 60px;
-        max-width: 23em;
+        max-width: fit-content;
         max-height: fit-content;
-        display: block;
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
