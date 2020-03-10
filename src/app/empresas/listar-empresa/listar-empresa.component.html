@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Empresas</h1>
-<button routerLink="../crear-empresa">Añadir cliente</button>
+<button routerLink="../crear-empresa">Añadir Empresa</button>
 
 <table class="empresas">
     <tr>
@@ -15,7 +15,7 @@
         <th>DIRECCIÓN</th>
           <th></th>
     
-    <!-- <tr *ngFor="let empresa of empresas"> -->
+    <tr *ngFor="let empresa of empresas">
          <td>{{empresa.nombreEmpresa}}</td>
          <td>{{empresa.idDireccion}}</td>
          <td>
