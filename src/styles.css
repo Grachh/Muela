@@ -28,9 +28,9 @@
         vertical-align: middle;
     }
         
-    .menu {
-        margin: 20px;
+     .menu {
         padding: 20px;
+        float: left;
         border-radius: 60px;
         max-width: fit-content;
         max-height: fit-content;
@@ -40,7 +40,7 @@
         align-items: center;
         justify-content: space-between;
            
-    }    
+    }       
     
     button {
         margin: 3px;
