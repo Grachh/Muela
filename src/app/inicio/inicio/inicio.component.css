@@ -39,28 +39,20 @@
         align-items: center;
         justify-content: space-between;
            
-    }    
-    /* .lateral {
-        display: block;
-        float: left;
-        border: solid 2px #008489;
-    } */
-
+    } 
 
     button {
         margin: 3px;
         border: 5px solid #008489;
         background-color: #008489;
         font-weight: bold;
-        color:white;
+        color: #01575a;
         border: 1px solid #008489;
         font-size: 1.5em;
         padding: 0.5em 1em;
-        border-radius: 1em;
+        border-radius: 0.3em;
         transition: all 400ms ease-in-out;
-        flex-direction: column;
     }
-    
     
     button:hover {
         background-color: white;
@@ -74,4 +66,19 @@
         color: white;
         cursor: not-allowed;
     }
-    
+
+    button.submit {
+        float: right;
+        color: teal;
+        border-radius: 0.3em;
+        background-color: white;
+        object-position: right;
+        align-items: end;
+        justify-content: flex-end;
+    }
+
+    button.submit:hover {
+        background-color:#54bec2;
+        color: white;
+        cursor: pointer;
+    }
