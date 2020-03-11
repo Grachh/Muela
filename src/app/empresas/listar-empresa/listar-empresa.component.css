@@ -90,4 +90,20 @@
         color: white;
         cursor: pointer;
     }
+
+    button.reset {
+        float: left;
+        color: teal;
+        border-radius: 0.3em;
+        background-color: white;
+        object-position: right;
+        align-items: end;
+        justify-content: flex-end;
+    }
+    
+    button.reset:hover {
+        background-color:red;
+        color: white;
+        cursor: pointer;
+    }
       

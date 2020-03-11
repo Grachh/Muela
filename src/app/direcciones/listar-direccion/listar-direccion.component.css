@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    } 
+        
+    body {
+        margin-right: 10px;
+        border-spacing: 10px;
+        border-radius: 2px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    h2 {
+        align-items: center;
+        text-decoration: underline;
+        justify-content: center;
+        display: flex;
+    }
+    
+
+    table {
+        width: 60%;
+        padding: 1em;
+        box-shadow: 2px 2px 3px grey;
+        margin: auto;
+    }
+    
+    th {
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+        background-color: #008489;
+        color: white;
+    }
+    
+    td {
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+        border: 2px solid #008489;
+    }
+    
+    th:nth-child(1), 
+    th:nth-child(2) {
+        text-align: left;
+    }
+    
+    td:nth-child(3) {
+        text-align: center;
+    }
+
+        
+    button {
+        margin: 3px;
+        border: 5px solid #008489;
+        background-color: #008489;
+        font-weight: bold;
+        color: #01575a;
+        border: 1px solid #008489;
+        font-size: 1.5em;
+        padding: 0.5em 1em;
+        border-radius: 0.3em;
+        transition: all 400ms ease-in-out;
+    }
+    
+    button:hover {
+        background-color: white;
+        color: #008489;
+        cursor: pointer;
+    }
+    
+    button[disabled] {
+        background-color: rgba(0, 132, 137, 0.3);
+        border: 1px solid rgba(0, 132, 137, 0.3);
+        color: white;
+        cursor: not-allowed;
+    }
+
+    button.submit {
+        float: right;
+        color: teal;
+        border-radius: 0.3em;
+        background-color: white;
+        object-position: right;
+        align-items: end;
+        justify-content: flex-end;
+    }
+
+    button.submit:hover {
+        background-color:#54bec2;
+        color: white;
+        cursor: pointer;
+    }
+
+    button.reset {
+        float: left;
+        color: teal;
+        border-radius: 0.3em;
+        background-color: white;
+        object-position: right;
+        align-items: end;
+        justify-content: flex-end;
+    }
+    
+    button.reset:hover {
+        background-color:red;
+        color: white;
+        cursor: pointer;
+    }
+      

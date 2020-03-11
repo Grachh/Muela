@@ -1,26 +1,51 @@
-<h1>Direcciones</h1>
-<button routerLink="../crear-direccion">Añadir direccion</button>
-
-<table class="direcciones">
-    <tr>
-        <th>DIRECCIÓN</th>
-        <th>CÓDIGO POSTAL</th>
-        <th>DESTINO</th>
-          <th></th>
-        
-    </tr>
-    <tr *ngFor="let direccion of direcciones">
-         <td>{{direccion.direccion}}</td>
-         <td>{{direccion.codigoPostal}}</td>
-         <td>{{direccion.destino}}</td>
-         <!-- <td>{{empresa.idDireccion}}</td> -->
-         <td>
-             <button  routerLink="/editar-direccion/{{direccion._idDireccion}}">
-                 <img src="assets/edit-2.svg">
-             </button>
-             <button  (click)="borrarDireccion(direccion._idDireccion)">
-                 <img src="assets/trash.svg">
-             </button>
-         </td>
-    </tr>
-</table>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Direcciones</title>
+</head>
+    <body>
+        <h2>
+            Direcciones
+        </h2>
+        <table class="direcciones">
+            <tr>
+                <th>
+                    DIRECCIÓN</th>
+                <th>
+                    CÓDIGO POSTAL</th>
+                <th>
+                    DESTINO</th>
+                <th>
+                    <button class="submit"
+                            routerLink="../crear-direccion">
+                                Añadir Direccion
+                    </button>
+                    <button  routerLink="../editar-direccion/{{direccion._iddireccion}}">
+                    <img src="assets/edit.svg">
+                </button>
+                <button class="reset" 
+                        (click)="borrarDireccion(direccion._iddireccion)">
+                    <!-- <img src="assets/trash.svg"> -->
+                                Borrar Direccion
+                </button>
+                </th>
+            </tr>
+            <tr *ngFor="let direccion of direcciones">
+                <td>{{direccion.direccion}}</td>
+                <td>{{direccion.codigoPostal}}</td>
+                <td>{{direccion.destino}}</td>
+                <!-- <td>{{empresa.idDireccion}}</td> -->
+                <td>
+                    <button  routerLink="/editar-direccion/{{direccion._idDireccion}}">
+                        <img src="assets/edit-2.svg">
+                    </button>
+                    <button  (click)="borrarDireccion(direccion._idDireccion)">
+                        <img src="assets/trash.svg">
+                    </button>
+                </td>
+            </tr>
+        </table>        
+    </body>
+</html>

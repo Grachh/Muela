@@ -10,8 +10,10 @@
             <h2>Empresas</h2>
             <table>
                 <tr>
-                    <th>NOMBRE EMPRESA</th>
-                    <th>DIRECCIÓN</th>
+                    <th>
+                        NOMBRE EMPRESA</th>
+                    <th>
+                        DIRECCIÓN</th>
                     <th>
                         <button class="submit" 
                                 routerLink="../crear-empresa">
@@ -22,15 +24,17 @@
                             Aceptar
                         </button>
                     </th>
-                
                 <tr *ngFor="let empresa of empresas">
-                    <td>{{empresa.nombreEmpresa}}</td>
-                    <td>{{empresa.idDireccion}}</td>
+                    <td>
+                        {{empresa.nombreEmpresa}}</td>
+                    <td>
+                        {{empresa.idDireccion}}</td>
                     <td>
                         <button  routerLink="../editar-empresa/{{empresa._idEmpresa}}">
                             <img src="assets/edit.svg">
                         </button>
-                        <button  (click)="borrarEmpresa(empresa._idEmpresa)">
+                        <button class="reset" 
+                                (click)="borrarEmpresa(empresa._idEmpresa)">
                             <img src="assets/trash.svg">
                         </button>
                     </td>

@@ -1,21 +1,52 @@
-
-<app-inicio></app-inicio>
-<form [formGroup]="formDireccion" (ngSubmit)="guardarDireccion()">
-    <div>
-        <label for="direccion">Direccion</label>
-        <input type="text" id="direccion" formControlName="direccion">
-    </div>
-    <div>
-        <label for="codigoPostal">Código Postal</label>
-        <input type="text" id="codigoPostal" formControlName="codigoPostal">
-    </div>
-    
-    <div>
-        <label for="destino">Destino</label>
-        <input type="text" id="destino" formControlName="destino">
-    </div>
-    <div>
-        <button type="submit">Guardar</button>
-        <button (click)= "limpiarCampos()"> Limpiar</button>
-    </div>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Direccion</title>
+</head>
+    <body>
+        <article class="form">
+            <h2>
+                Creao o Editar Direccion
+            </h2>
+                <form [formGroup]="formDireccion" 
+                      (ngSubmit)="guardarDireccion()">
+                    <div>
+                        <label for="direccion">
+                            Direccion
+                        </label>
+                        <input type="text" 
+                                id="direccion" 
+                                formControlName="direccion">
+                    </div>
+                    <div>
+                        <label for="codigoPostal">
+                            Código Postal
+                        </label>
+                        <input type="text" 
+                               id="codigoPostal" 
+                               formControlName="codigoPostal">
+                    </div>
+                    <div>
+                        <label for="destino">
+                            Destino
+                        </label>
+                        <input  type="text" 
+                                id="destino" 
+                                formControlName="destino">
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="submit">
+                            Guardar
+                        </button>
+                        <button (click)= "limpiarCampos()"
+                                class="reset"> 
+                            Limpiar
+                        </button>
+                    </div>
+                </form>
+        </article>        
+    </body>
+</html>
