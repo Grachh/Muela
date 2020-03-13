@@ -1,1 +1,23 @@
-<p>crear-producto works!</p>
+<app-inicio></app-inicio>
+<form [formGroup]="formProducto" (ngSubmit)="guardarProducto()">
+    <div>
+        <label for="codigoCliente">Código de producto</label>
+        <input type="text" id="codigoCliente" formControlName="codigoCliente">
+    </div>
+    <div>
+        <label for="ean">Código de Barras (ean)</label>
+        <input type="text" id="ean" formControlName="ean">
+    </div>
+    
+    <div>
+        <label for="idEmpresa">Seleccione la empresa proveedora</label>
+        <select id="idEmpresa" formControlName="idEmpresa">
+                <option *ngFor="let empresa of empresas" [value]="empresa.idEmpresa">{{empresa.nombreEmpresa}}</option>
+           
+        </select> 
+    </div>
+    <div>
+        <button type="submit">Guardar</button>
+        <button (click)= "limpiarCampos()"> Limpiar</button>
+    </div>
+</form>

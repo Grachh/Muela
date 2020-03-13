@@ -24,6 +24,7 @@ import { EditarEtiquetaComponent } from './etiquetas/paginadoEtiqueta/editar-eti
 import { ListarProductoComponent } from './productos/listar-producto/listar-producto.component';
 import { CrearProductoComponent } from './productos/crear-producto/crear-producto.component';
 import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
+import { EtiquetaProductoComponent } from './generar-etiquetas/etiqueta-producto/etiqueta-producto.component';
 
 
 
@@ -47,6 +48,7 @@ import { EditarProductoComponent } from './productos/editar-producto/editar-prod
     ListarProductoComponent,
     CrearProductoComponent,
     EditarProductoComponent,
+    EtiquetaProductoComponent,
     
   ],
   imports: [

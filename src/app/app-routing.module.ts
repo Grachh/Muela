@@ -51,6 +51,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-  // if path=!""(),  intento de ignorar app-inicio
- }
+export class AppRoutingModule { }

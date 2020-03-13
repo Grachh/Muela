@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Direccion} from "../model/direccion"
 import {Observable} from "rxjs/index";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,8 +25,7 @@ export class DireccionesService {
   constructor(private http: HttpClient) {  
    }
 
-   baseUrl: string = 'http://192.168.0.202:8080/direccion';
-
+   baseUrl: string = 'assets/direcciones.json';
 
    getDirecciones() {
      return this.direcciones;
@@ -35,20 +35,42 @@ export class DireccionesService {
   //   return this.http.get<Direccion[]>(this.baseUrl);
   // }
 
+  //  getDirecciones() : Observable<any> {
+  //   return this.http.get(this.baseUrl);
+  // }
   
-  getDireccionById(idDireccion: number): Observable<Direccion[]> {
-    return this.http.get<Direccion[]>(this.baseUrl + idDireccion);
+  getDireccionById(idDireccion: number): Observable<any> {
+    return this.http.get(this.baseUrl + idDireccion);
   }
 
   crearDireccion(direccion: Direccion): Observable<Direccion[]> {
     return this.http.post<Direccion[]>(this.baseUrl, direccion);
   }
+  
+  //  crearDireccion(direccion: Direccion): Observable<any> {
+  //   return this.http.post(this.baseUrl, direccion);
+  // }
+  
+  
 
-  modificarDireccion(idDireccion: number, direccion: Direccion): Observable<Direccion[]> {
-    return this.http.put<Direccion[]>(this.baseUrl + idDireccion, direccion);
+  // modificarDireccion(idDireccion: number, direccion: Direccion): Observable<Direccion[]> {
+  //   return this.http.put<Direccion[]>(this.baseUrl + idDireccion, direccion);
+  // }
+  modificarDireccion(idDireccion: number, direccion: Direccion): Observable<any> {
+    return this.http.put(this.baseUrl + idDireccion, direccion);
   }
 
-  borrarDireccion(idDireccion: number): Observable<Direccion[]> {
-    return this.http.delete<Direccion[]>(this.baseUrl + idDireccion);
+
+  
+
+  // borrarDireccion(idDireccion: number): Observable<Direccion[]> {
+  //   return this.http.delete<Direccion[]>(this.baseUrl + idDireccion);
+  // }
+
+  
+  
+
+  borrarDireccion(idDireccion: number): Observable<any> {
+    return this.http.delete(this.baseUrl + idDireccion);
   }
 }

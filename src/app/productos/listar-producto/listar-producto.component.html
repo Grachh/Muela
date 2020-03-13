@@ -1,1 +1,27 @@
-<p>listar-producto works!</p>
+<app-inicio></app-inicio>
+<h1>Producots</h1>
+<button routerLink="../crear-producto">Añadir producto</button>
+
+<table class="direcciones">
+    <tr>
+        <th>CÓDIGO CLIENTE</th>
+        <th>EAN </th>
+        <th>PROVEEDOR</th>
+          <th></th>
+        
+    </tr>
+    <tr *ngFor="let producto of productos">
+         <td>{{producto.codigoCliente}}</td>
+         <td>{{producto.ean}}</td>
+         <td>{{producto.idEmpresa}}</td>
+         <!-- <td>{{empresa.idDireccion}}</td> -->
+         <td>
+             <button  routerLink="/editar-producto/{{producto._idProducto}}">
+                 <img src="assets/edit-2.svg">
+             </button>
+             <button  (click)="borrarProducto(producto._idProducto)">
+                 <img src="assets/trash.svg">
+             </button>
+         </td>
+    </tr>
+</table>

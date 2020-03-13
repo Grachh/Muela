@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EtiquetaEnvioComponent } from './etiqueta-envio.component';
+import { EtiquetaProductoComponent } from './etiqueta-producto.component';
 
-describe('EtiquetaEnvioComponent', () => {
-  let component: EtiquetaEnvioComponent;
-  let fixture: ComponentFixture<EtiquetaEnvioComponent>;
+describe('EtiquetaProductoComponent', () => {
+  let component: EtiquetaProductoComponent;
+  let fixture: ComponentFixture<EtiquetaProductoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EtiquetaEnvioComponent ]
+      declarations: [ EtiquetaProductoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EtiquetaEnvioComponent);
+    fixture = TestBed.createComponent(EtiquetaProductoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
