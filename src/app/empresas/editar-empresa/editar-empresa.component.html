@@ -1,21 +1,61 @@
-<form [formGroup]="formEmpresa" (ngSubmit)="modificarEmpresa()">
-    <div>
-        <label for="idEmpresa">Id Empresa</label>
-        <input type="number" id="idEmpresa" formControlName="idEmpresa" readonly>
-    </div>
-    <div>
-        <label for="nombreEmpresa">Nombre Empresa</label>
-        <input type="text" id="nombreEmpresa" formControlName="nombreEmpresa">
-    </div>
-    <div>
-        <label for="idDireccion">Seleccione la direccion</label>
-    <select id="idDireccion" formControlName="idDireccion">
-            <option *ngFor="let direccion of direcciones" [value]="direccion.idDireccion">{{direccion.direccion}}</option>
-       
-    </select> 
-    </div>
-    <div>
-        <button type="submit">Guardar</button>
-        <button (click)= "limpiarCampos()">Guardar</button>
-    </div>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Empresa</title>
+</head>
+<body>
+    <article class="form">
+        <h2>
+            Editar Empresa
+        </h2>
+        <form [formGroup]="formEmpresa" (ngSubmit)="modificarEmpresa()">
+            <div class="id">
+                <label for="idEmpresa">
+                    Id Empresa
+                </label>
+                <input 
+                    type="number" 
+                    id="idEmpresa" 
+                    formControlName="idEmpresa" 
+                    readonly>
+            </div>
+            <div>
+                <label for="nombreEmpresa">
+                    Nombre Empresa
+                </label>
+                <input 
+                    type="text" 
+                    id="nombreEmpresa" 
+                    formControlName="nombreEmpresa"
+                    autofocus
+                    required>
+            </div>
+            <div>
+                <label for="idDireccion">
+                    Seleccione la direccion
+                </label>
+            <select 
+                id="idDireccion" 
+                formControlName="idDireccion">
+                    <option *ngFor="let direccion of direcciones" 
+                    [value]="direccion.idDireccion">
+                        {{direccion.direccion}}
+                    </option>
+            </select> 
+            </div>
+            <div>
+                <button type="submit"
+                        class="submit">
+                    Guardar
+                </button>
+                <button (click)= "limpiarCampos()"
+                        class="reset">
+                    Limpiar
+                </button>
+            </div>
+        </form>
+    </article>
+</body>
+</html>

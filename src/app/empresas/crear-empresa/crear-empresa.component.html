@@ -8,7 +8,7 @@
     <body>
         <article class="form">
             <h2>
-                Crear o Editar Empresa
+                Crear Empresa
             </h2>
                 <form [formGroup]="formEmpresa" 
                         (ngSubmit)="crearEmpresa()">
@@ -24,37 +24,51 @@
                         <label for="nombreEmpresa">
                             Nombre Empresa
                         </label>
-                        <input type="text" 
+                        <input 
+                            type="text" 
                             id="nombreEmpresa" 
-                            formControlName="nombreEmpresa">
+                            formControlName="nombreEmpresa"
+                            autofocus
+                            required>
                     </div>
                     <div class="id"> 
-                        <label for="idDireccion">Id Direccion</label>
-                        <input type="number" id="idDireccion" formControlName="idDireccion">
+                        <label for="idDireccion">
+                            Id Direccion
+                        </label>
+                        <input 
+                            type="number" 
+                            id="idDireccion" 
+                            formControlName="idDireccion">
                     </div>
                     <div> 
                         <label for="direccion">
                             Direccion
                         </label>
-                        <input type="text" 
+                        <input 
+                            type="text" 
                             id="Direccion" 
-                            formControlName="direccion">
+                            formControlName="direccion"
+                            required>
                     </div>
                     <div>
                         <label for="codigoPostal">
                             Código Postal
                         </label>
-                        <input type="number" 
+                        <input 
+                            type="number" 
                             id="codigoPostal" 
-                            formControlName="codigoPostal">
+                            formControlName="codigoPostal"
+                            required>
                     </div>
                     <div> 
                         <label for="destino">
                             Destino
                         </label>
-                        <input type="text" 
+                        <input 
+                            type="text" 
                             id="destino" 
-                            formControlName="destino">
+                            formControlName="destino"
+                            required>
                     </div>
                     <div>
                         <button type="reset"
